@@ -9,9 +9,9 @@ resource "null_resource" "helm" {
 }
 
 provider "helm" {
-    kubernetes {
-        config_path = "~/.kube/config"
-    }
+  kubernetes = {
+    config_path = "~/.kube/config"
+  }
 }
 
 resource "helm_release" "argocd" {
